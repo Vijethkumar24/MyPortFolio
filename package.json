@@ -1,5 +1,5 @@
 {
-  "homepage": "http://github.io/Vijethkumar24/MyPortFolio/",
+  "homepage": "https://github.io/Vijethkumar24/MyPortFolio/",
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build && echo `https://github.io/Vijethkumar24/MyPortFolio/` ",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
