@@ -5,6 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
+    base: "/VkPortfolio/",
     outDir: "build", // This specifies the output directory
     rollupOptions: {
       input: "./index.html", // Adjust this based on your project's structure
