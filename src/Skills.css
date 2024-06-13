@@ -12,7 +12,7 @@
 }
 
 .skillsImage {
-    width: 16%;
+    width: 30%;
     height: auto; /* Maintain aspect ratio */
     column-count: 2; /* Not necessary for images, use flex or grid instead */
     position: relative;

@@ -11,7 +11,7 @@ body {
 	background-position: center center; /* Centers the background image */
 	background-size: cover; /* Cover the entire background */
 	overflow: hidden;
-	height: 100%;
+	min-height: 100vh;
 	background-attachment: fixed;
 	animation: attractBackground 10s linear infinite alternate; /* Apply the animation */
 }
@@ -41,7 +41,7 @@ body {
 
 .projects-content {
 	display: flex;
-	height: 100vh;
+	min-height: 100vh;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: flex-start;
@@ -96,9 +96,18 @@ body {
 }
 
 @media (max-width: 768px) {
+	body{
+		overflow-y: scroll;
+		scroll-behavior: smooth;
+	}
+	.projects-content {
+		flex-direction: row;
+		align-items: center;
+	}
 	.project-card {
-		width: calc(50% - 40px);
+		width: calc(100% - 40px); /* Full width minus padding */
 		height: auto;
+		flex-wrap: wrap;
 		font-size: medium;
 		margin: 10px;
 		padding: 10px;
@@ -108,22 +117,6 @@ body {
 	}
 	.project-card h3 {
 		font-size: 1rem;
-	}
-}
-
-@media (max-width: 480px) {
-	.project-card {
-		width: calc(100% - 40px);
-		height: auto;
-		font-size: small;
-		margin: 10px;
-		padding: 10px;
-	}
-	.project-card p {
-		font-size: 0.7rem;
-	}
-	.project-card h3 {
-		font-size: 0.9rem;
 	}
 }
 

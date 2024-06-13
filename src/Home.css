@@ -144,7 +144,10 @@
   }
 
   .text-content h1 {
+    padding-top: 100px;
+    padding-bottom: 10px;
     font-size: 36px;
+    border-right: 0px;
   }
 
   .text-content p {
@@ -158,12 +161,10 @@
 
   .image-content .astronaut {
     width: 150px;
-    top: -450px;
-    left: -350px;
+    top: -550px;
+    left: -250px;
     transform: translate(50vw, -50vh) scaleX(-1);
   }
-
-
   
 }
 .play-audio-button {

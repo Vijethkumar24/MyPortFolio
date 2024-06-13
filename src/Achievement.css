@@ -18,7 +18,7 @@
   .achievements-content {
     position: relative;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
@@ -56,8 +56,24 @@
   }
   
   /* Responsive design */
-  @media (max-width: 768px) {
-    .achievement-card {
+@media (max-width: 768px) {
+	.achievement-content {
+		flex-direction: row;
+		align-items: center;
+	}
+	.achievement-card {
+		width: calc(100% - 40px); /* Full width minus padding */
+		height: auto;
+		font-size: medium;
+		margin: 10px;
+		padding: 10px;
+	}
+	.achievement-card p {
+		font-size: 0.8rem;
+	}
+	.achievement-card h3 {
+		font-size: 1rem;
+	}   .achievement-card {
       width: calc(50% - 40px);
     }
   }
@@ -123,7 +139,7 @@
   }
  
   
-  /* Apply unique animations to each project card */
+  /* Apply unique animations to each achievement card */
   .achievement-card:nth-child(1) {
     animation: float1 6s ease-in-out infinite;
   }
@@ -185,7 +201,7 @@
   .achievement-card:hover .pin {
     display: block; /* Show the pin on hover */
   }
- .project-image{
+ .achievement-image{
   width: 70px;
   float: left;
   padding-right: 10px;

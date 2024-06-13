@@ -68,7 +68,7 @@ nav a:hover {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #fffafa;
 }
 
 @media only screen and (max-width: 768px) {
@@ -77,12 +77,11 @@ nav a:hover {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #458fd1;
     width: 100%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 27px rgba(250, 244, 244, 0.05);
     z-index: 20;
   }
   .text-content{
@@ -92,8 +91,9 @@ nav a:hover {
 
   .nav-menu.active {
     left: 0;
-    background-color: rgb(118, 34, 144);
+    background-color: rgb(65, 2, 90);
   }
+
 
   .nav-item {
     margin: 2.5rem 0;
@@ -102,6 +102,7 @@ nav a:hover {
   .hamburger {
     display: block;
     cursor: pointer;
+    padding-left: 200px;
   }
 }
 
