@@ -4,5 +4,10 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/MyPortFolio/",
+  build: {
+    outDir: "build", // This specifies the output directory
+    rollupOptions: {
+      input: "/index.html", // Adjust this based on your project's structure
+    },
+  },
 });
