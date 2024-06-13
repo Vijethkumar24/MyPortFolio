@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../public/fonts/WhoaSaucePersonalUseBold-mLmV5.ttf') format('truetype');
+}
+
+.skills-content {
+    background-color: rgba(17, 19, 19, 0.208);
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 30px;
+    font-family: 'MyFont', sans-serif;
+}
+
+.skillsImage {
+    width: 16%;
+    height: auto; /* Maintain aspect ratio */
+    column-count: 2; /* Not necessary for images, use flex or grid instead */
+    position: relative;
+    margin: 0 28px; /* Center image with equal margin */
+    padding: 50px 50px;
+    display: flex-box; /* Centering images */
+    justify-content: center;
+    align-items: center;
+    animation: float 10s infinite ;
+}
+/* @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+      transform: rotate(180);
+    }
+    50% {
+      transform: translateY(-20px);
+      transform: rotate(-180);
+    }
+  } */
+  .skillsImage {
+    animation: float 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes float1 {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(20px, -20px);
+    }
+  }
+  
+  @keyframes float2 {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-20px, 20px);
+    }
+  }
+  
+  @keyframes float3 {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(15px, 15px);
+    }
+  }
+  
+  @keyframes float4 {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-15px, -15px);
+    }
+  }
+  
+  @keyframes float5 {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, -10px);
+    }
+  }
+  
+  /* Apply unique animations to each image */
+  .skillsImage:nth-child(1) {
+    animation: float1 6s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(2) {
+    animation: float2 8s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(3) {
+    animation: float3 7s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(4) {
+    animation: float4 9s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(5) {
+    animation: float5 5s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(6) {
+    animation: float1 6s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(7) {
+    animation: float2 8s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(8) {
+    animation: float3 7s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(9) {
+    animation: float4 9s ease-in-out infinite;
+  }
+  
+  .skillsImage:nth-child(10) {
+    animation: float5 5s ease-in-out infinite;
+  }
+
+  .skillsImage:hover{
+    background-image: url('./assets/imgs/bubble.png');
+    animation-play-state: paused;
+    background-size: cover;
+    animation: rotateBubble 5s linear infinite;
+  }
+  @keyframes rotateBubble {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
