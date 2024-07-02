@@ -5,14 +5,13 @@
 
 .skills-content {
     background-color: rgba(17, 19, 19, 0.208);
-    height: 100vh;
-    padding-top: 50px;
-    padding-left: 30px;
+    min-height: 100vh;
+    padding: 50px;
     font-family: 'MyFont', sans-serif;
 }
 
 .skillsImage {
-    width: 30%;
+    width: 16%;
     height: auto; /* Maintain aspect ratio */
     column-count: 2; /* Not necessary for images, use flex or grid instead */
     position: relative;
@@ -91,6 +90,14 @@
     }
     50% {
       transform: translate(10px, -10px);
+    }
+  }
+  @media (max-width: 768px) {
+    .skillsImage{
+      width: 60%;
+    }
+    .skills-content {
+      padding-left: 150px;
     }
   }
   

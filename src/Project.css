@@ -6,38 +6,56 @@
 body {
 	margin: 0;
 	font-family: 'Arial', sans-serif;
-	background-image: url('./assets/imgs/14571742_5499771.jpg'); /* Ensures the image covers the whole background */
-	background-repeat: no-repeat; /* Prevents the image from repeating */
-	background-position: center center; /* Centers the background image */
-	background-size: cover; /* Cover the entire background */
+	background-image: url('./assets/imgs/background_img.jpg');
+	/* Ensures the image covers the whole background */
+	background-repeat: no-repeat;
+	/* Prevents the image from repeating */
+	background-position: center center;
+	/* Centers the background image */
+	background-size: cover;
+	/* Cover the entire background */
 	overflow: hidden;
 	min-height: 100vh;
 	background-attachment: fixed;
-	animation: attractBackground 10s linear infinite alternate; /* Apply the animation */
+	-webkit-animation: slidein 100s ;
+	animation: slidein 100s ;
+
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
 }
- 
-@keyframes attractBackground {
-	0% {
-		background-position: center center; /* Start position */
-		background-size: cover; /* Normal size */
+
+
+@-webkit-keyframes slidein {
+	from {
+		background-position: top;
+		background-size: 3000px;
 	}
-	25% {
-		background-position: left center; /* Move left */
-		background-size: cover; /* Maintain cover while zooming */
-	}
-	50% {
-		background-position: center center; /* Center position */
-		background-size: cover; /* More zoom while maintaining cover */
-	}
-	75% {
-		background-position: right center; /* Move right */
-		background-size: cover; /* Slightly zoom in while maintaining cover */
-	}
-	100% {
-		background-position: center center; /* End position */
-		background-size: cover; /* Normal size */
+
+	to {
+		background-position: -100px 0px;
+		background-size: 2750px;
 	}
 }
+
+@keyframes slidein {
+	from {
+		background-position: top;
+		background-size: 3000px;
+	}
+
+	to {
+		background-position: -100px 0px;
+		background-size: 2750px;
+	}
+
+}
+
 
 .projects-content {
 	display: flex;
@@ -89,6 +107,7 @@ body {
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.project-card {
 		width: calc(50% - 40px);
 		height: auto;
@@ -96,91 +115,129 @@ body {
 }
 
 @media (max-width: 768px) {
-	body{
+	body {
 		overflow-y: scroll;
 		scroll-behavior: smooth;
 	}
+
 	.projects-content {
 		flex-direction: row;
 		align-items: center;
 	}
+
 	.project-card {
-		width: calc(100% - 40px); /* Full width minus padding */
+		width: calc(100% - 40px);
+		/* Full width minus padding */
 		height: auto;
 		flex-wrap: wrap;
 		font-size: medium;
 		margin: 10px;
 		padding: 10px;
 	}
+
 	.project-card p {
 		font-size: 0.8rem;
 	}
+
 	.project-card h3 {
 		font-size: 1rem;
+	}
+
+	.ProfileImg {
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		top: 53%;
+		left: 27%;
+
+	}
+
+	.text-content {
+		padding-top: 50px;
 	}
 }
 
 .astronaut {
 	position: absolute;
-	transition: top 1s ease-in-out, left 1s ease-in-out; /* Smooth transition */
+	transition: top 1s ease-in-out, left 1s ease-in-out;
+	/* Smooth transition */
 }
 
 .astronaut img {
-	width: 180px; /* Adjust size as needed */
+	width: 180px;
+	/* Adjust size as needed */
 	height: auto;
-	animation: floatUpDown 4s ease-in-out infinite; 
+	animation: floatUpDown 4s ease-in-out infinite;
 	transition: attract 10s linear infinite alternate;
 }
 
 @keyframes floatUpDown {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-20px);
 	}
 }
 
 @keyframes float1 {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translate(0, 0);
 	}
+
 	50% {
 		transform: translate(20px, -20px);
 	}
 }
 
 @keyframes float2 {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translate(0, 0);
 	}
+
 	50% {
 		transform: translate(-20px, 20px);
 	}
 }
 
 @keyframes float3 {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translate(0, 0);
 	}
+
 	50% {
 		transform: translate(15px, 15px);
 	}
 }
 
 @keyframes float4 {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translate(0, 0);
 	}
+
 	50% {
 		transform: translate(-15px, -15px);
 	}
 }
 
 @keyframes float5 {
-	0%, 100% {
+
+	0%,
+	100% {
 		transform: translate(0, 0);
 	}
+
 	50% {
 		transform: translate(10px, -10px);
 	}
@@ -236,16 +293,20 @@ body {
 
 .pin {
 	position: absolute;
-	top: -20px; /* Adjust based on the pin image height */
+	top: -20px;
+	/* Adjust based on the pin image height */
 	left: 50%;
 	transform: translateX(-50%);
-	width: 30px; /* Adjust the size of the pin as needed */
+	width: 30px;
+	/* Adjust the size of the pin as needed */
 	height: auto;
-	display: none; /* Initially hide the pin */
+	display: none;
+	/* Initially hide the pin */
 }
 
 .project-card:hover .pin {
-	display: block; /* Show the pin on hover */
+	display: block;
+	/* Show the pin on hover */
 }
 
 .project-image {
