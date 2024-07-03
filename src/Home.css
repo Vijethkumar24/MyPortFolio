@@ -144,7 +144,7 @@
   }
 
   .text-content h1 {
-    padding-top: 30px;
+    padding-top: 18px;
     padding-bottom: 10px;
     font-size: 36px;
     border-right: 0px;
@@ -167,9 +167,10 @@
   }
   
 }
+
 .play-audio-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   background-color: #bf00ff;
   color: white;
@@ -196,6 +197,26 @@
 }
 .ProfileImg:hover{
   border: 2px solid rgb(252, 253, 254);
+}
+@media (max-width: 600px) {
+  .text-content h1{
+    font-size: 1.6em;
+  }
+  .text-content p{
+  font-size: 0.9em;
+}
+.play-audio-button{
+  position: absolute;
  
- 
+}
+.ProfileImg{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 200px !important;
+  height: 200px !important; 
+}
+  
 }

@@ -100,6 +100,14 @@
       padding-left: 150px;
     }
   }
+  @media (max-width: 600px) {
+    .skillsImage{
+      width: 70%;
+    }
+    .skills-content {
+      padding-left: 60px;
+    }
+  }
   
   /* Apply unique animations to each image */
   .skillsImage:nth-child(1) {
