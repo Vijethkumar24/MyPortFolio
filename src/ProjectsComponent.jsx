@@ -24,7 +24,7 @@ function ProjectsComponent() {
       imgsrc: Scannerrimg,
     },
     {
-      title: "Solar Edge Ecommerce-App",
+      title: "Solar Connect Ecommerce-App",
       description:
         "The App provides a simplified online shopping experience for solar items, allowing users to browse and buy solar panels, inverters, and related equipment in one convenient location.",
       imgsrc: Solarimg,
