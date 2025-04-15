@@ -12,7 +12,7 @@ import PortFolioimg from "./assets/imgs/PortFolio.png";
 function ProjectsComponent() {
   const projects = [
     {
-      title: "Counterfeit Detection Of Documents Using BlockChain",
+      title: "A Blockchain-Based Solution for Certificate Forgery: Enhancing Security and Reliability in Document Authentication",
       description:
         "Developed a decentralized, immutable blockchain-based system to detect fake documents using Ethereum smart contracts, ensuring the authenticity & integrity.",
       imgsrc: Docimg,
@@ -24,7 +24,7 @@ function ProjectsComponent() {
       imgsrc: Scannerrimg,
     },
     {
-      title: "Solar Connect Ecommerce-App",
+      title: "Solar-Connect Ecommerce-App",
       description:
         "The App provides a simplified online shopping experience for solar items, allowing users to browse and buy solar panels, inverters, and related equipment in one convenient location.",
       imgsrc: Solarimg,
